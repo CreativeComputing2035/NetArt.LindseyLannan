@@ -1,0 +1,36 @@
+<html>
+<style>
+    #myAnimation {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-color: gray;
+    }
+    </style>
+<body>
+    
+    
+<p>
+    <button onclick="myMove ()">Move</button>
+    </p>
+    
+    <div id ="myAnimation"></div>
+    
+    <script>
+    function myMove () {
+    var elem = document.getElementById("myAnimation");
+    var pos = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+    if (pos == 350) {
+    clearInterval (id);
+    } else {
+    pos++;
+    elem.style.top = pos + 'px';
+    elem.style.left = pos + 'px';
+    }
+}
+}
+</script>
+</body>
+</html>
